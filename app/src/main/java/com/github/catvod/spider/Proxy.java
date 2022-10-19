@@ -6,6 +6,8 @@ import com.github.catvod.crawler.Spider;
 import com.github.catvod.crawler.SpiderDebug;
 import com.github.catvod.live.TxtSubscribe;
 import com.github.catvod.utils.okhttp.OkHttpUtil;
+import com.github.catvod.parser.MixDemo;
+import com.github.catvod.parser.MixWeb;
 
 import java.io.ByteArrayInputStream;
 import java.util.Map;
@@ -55,8 +57,19 @@ public class Proxy extends Spider {
                 return result;
             } else if (what.equals("push")) {
                 return PushAgent.vod(params);
+            } else if (what.equals("kmys")) {
+                return Kmys.vod(params);
+            } else if (what.equals("ali")) {
+                return PushAgent.vod(params);
             } else if (what.equals("czspp")) {
                 return Czsapp.loadsub(params.get("url"));
+            } else if (what.equals("XYQBiu")) {
+                return XYQBiu.loadPic(params);
+            } else if (what.equals("MixDemo")) {
+                return MixDemo.loadHtml(params.get("flag"), params.get("url"));
+            }
+            else if (what.equals("MixWeb")) {
+                return MixWeb.loadHtml(params.get("flag"), params.get("url"));
             }
 
         } catch (Throwable th) {
