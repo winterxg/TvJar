@@ -41,7 +41,7 @@ public class AppTT extends Spider {
     @Override
 public void init(Context context, String extend) {
     super.init(context, extend);
-    SiteUrl = extend;
+    siteUrl = extend;
    }
 
     private String uAgent = "Dalvik/2.1.0 (Linux; U; Android " + Build.VERSION.RELEASE + "; " + Build.MODEL + " Build/" + Build.ID + ")";
