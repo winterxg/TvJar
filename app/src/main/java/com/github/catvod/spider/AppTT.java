@@ -36,7 +36,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class AppTT extends Spider {
     private static final String KEY = "SRK#e%4UYtU#KiEo*vsPqpr0cC4bxAQW";
     private static final String IV = "o6sYmm*x5hn#rcCt";
-    siteUrl = "";
+    String siteUrl = "";
 
     @Override
 public void init(Context context, String extend) {
